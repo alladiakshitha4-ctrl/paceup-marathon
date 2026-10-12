@@ -1,0 +1,788 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #082747;
+    --navy-light: #123d64;
+    --orange: #ff7900;
+    --orange-dark: #e96800;
+    --white: #ffffff;
+    --light: #f4f8fc;
+    --text: #27394d;
+    --muted: #68788a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 22px 15px 16px;
+}
+
+.logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+.tagline {
+    color: #dce7f2;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.navbar {
+    background: #0d3458;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px;
+}
+
+.navbar a {
+    color: var(--white);
+    padding: 9px 19px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.hero {
+    min-height: 440px;
+    padding: 75px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: var(--white);
+    background: linear-gradient(120deg, #082747, #145078);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: #e0eaf3;
+    font-size: 17px;
+    max-width: 520px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 7px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.primary {
+    background: var(--orange);
+    color: var(--white);
+}
+
+.primary:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #ffffff;
+    color: var(--white);
+}
+
+.secondary:hover {
+    background: var(--white);
+    color: var(--navy);
+}
+
+.hero-badge {
+    min-width: 210px;
+    padding: 28px 20px;
+    text-align: center;
+    border: 1px solid #ffffff40;
+    border-radius: 18px;
+    background: #ffffff12;
+}
+
+.hero-badge span {
+    display: block;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero-badge strong,
+.hero-badge small {
+    display: block;
+}
+
+.hero-badge small {
+    color: #dce7f2;
+    margin-top: 5px;
+}
+
+.section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.section h2,
+.cta h2 {
+    color: var(--navy);
+    font-size: clamp(27px, 4vw, 36px);
+    line-height: 1.25;
+}
+
+.section-intro {
+    color: var(--muted);
+    margin: 12px 0 32px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+    text-align: left;
+}
+
+.card {
+    background: var(--white);
+    padding: 28px;
+    border: 1px solid #e0e8f0;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px #0827470a;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px #08274718;
+    border-color: #ffb36d;
+}
+
+.card-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    background: #fff0e3;
+    border-radius: 12px;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.card a {
+    color: var(--orange-dark);
+    font-weight: 700;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.cta {
+    margin: 0 8% 60px;
+    padding: 35px;
+    background: var(--light);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta p:not(.eyebrow) {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.cta .button {
+    flex-shrink: 0;
+}
+
+.faq {
+    background: var(--light);
+}
+
+.faq details {
+    max-width: 850px;
+    margin: 15px auto;
+    padding: 19px 22px;
+    background: var(--white);
+    border: 1px solid #e0e8f0;
+    border-radius: 9px;
+    text-align: left;
+}
+
+.faq summary {
+    color: var(--navy);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.faq details p {
+    color: var(--muted);
+    padding-top: 12px;
+}
+
+.footer {
+    background: var(--navy);
+    color: var(--white);
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.footer .logo {
+    font-size: 30px;
+}
+
+.footer > p {
+    color: #dce7f2;
+    margin-top: 5px;
+}
+
+.footer .copyright {
+    border-top: 1px solid #ffffff25;
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 750px) {
+    .hero {
+        padding: 55px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-badge {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin: 0 5% 40px;
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section {
+        padding: 45px 6%;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        font-size: 30px;
+    }
+
+    .navbar {
+        gap: 5px;
+    }
+
+    .navbar a {
+        padding: 8px 11px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+.search-box,
+.form-card input,
+.form-card select {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccd7e2;
+    border-radius: 7px;
+    font-size: 16px;
+    background: #ffffff;
+}
+
+.search-box {
+    max-width: 550px;
+    margin: 25px auto 10px;
+    display: block;
+}
+
+.form-card {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid #e0e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px #08274712;
+}
+
+.form-card label {
+    display: block;
+    color: #082747;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.form-card h2 {
+    margin-bottom: 20px;
+}
+
+.form-card button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.fee-line {
+    padding: 15px 0;
+    color: #082747;
+    font-size: 18px;
+}
+
+.race-pass {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 35px;
+    text-align: left;
+    background: #ffffff;
+    border: 2px dashed #ff7900;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #08274712;
+    overflow-wrap: anywhere;
+}
+
+.race-pass h3 {
+    color: #082747;
+    font-size: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff7900;
+    padding-bottom: 12px;
+}
+
+.race-pass p {
+    margin: 12px 0;
+}
+
+.pass-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.save-button {
+    background: #082747;
+    color: #ffffff;
+}
+
+.save-button:hover {
+    background: #123d64;
+}
+
+#formMessage,
+#paymentMessage,
+#passMessage {
+    margin-top: 15px;
+    color: #087443;
+    font-weight: 700;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 500px) {
+    .form-card,
+    .race-pass {
+        padding: 20px;
+    }
+}
+
+/* DIGITAL RACE PASS */
+
+.pass-page {
+    min-height: 65vh;
+    padding: 55px 6% 70px;
+    background: #f2f6fb;
+}
+
+.pass-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.pass-heading h1 {
+    color: #082747;
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 8px;
+}
+
+.pass-heading > p:last-child {
+    color: #68788a;
+}
+
+#passContainer {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.empty-pass {
+    background: #ffffff;
+    border: 1px solid #dce5ef;
+    border-radius: 18px;
+    padding: 45px 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px #0827470d;
+}
+
+.empty-icon {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.empty-pass h2 {
+    color: #082747;
+    margin-bottom: 10px;
+}
+
+.empty-pass p {
+    color: #68788a;
+    margin-bottom: 25px;
+}
+
+.pass-ticket {
+    overflow: hidden;
+    border-radius: 22px;
+    background: #ffffff;
+    box-shadow: 0 18px 45px #0827471a;
+    border: 1px solid #dce5ef;
+}
+
+.ticket-top {
+    position: relative;
+    padding: 30px 34px;
+    color: #ffffff;
+    background: linear-gradient(125deg, #061c35, #124a70);
+}
+
+.ticket-brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.ticket-logo {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.ticket-logo span {
+    color: #ff7900;
+}
+
+.ticket-label {
+    border: 1px solid #ffffff55;
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.ticket-event {
+    margin-top: 30px;
+}
+
+.ticket-event .ticket-kicker {
+    color: #ffad65;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ticket-event h2 {
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1.2;
+    margin: 8px 0;
+    color: #ffffff;
+}
+
+.ticket-event p {
+    color: #dce7f2;
+}
+
+.ticket-runner {
+    padding: 28px 34px;
+}
+
+.ticket-small-label {
+    color: #78889a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.ticket-runner h3 {
+    color: #082747;
+    font-size: 27px;
+    margin: 4px 0 18px;
+    overflow-wrap: anywhere;
+}
+
+.ticket-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 25px;
+}
+
+.ticket-detail {
+    min-width: 0;
+    padding: 13px 0;
+    border-bottom: 1px solid #e7edf4;
+}
+
+.ticket-detail strong {
+    display: block;
+    color: #082747;
+    font-size: 16px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.ticket-divider {
+    border-top: 2px dashed #d7e0ea;
+    margin: 0 34px;
+    position: relative;
+}
+
+.ticket-divider::before,
+.ticket-divider::after {
+    content: "";
+    position: absolute;
+    top: -13px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f2f6fb;
+}
+
+.ticket-divider::before {
+    left: -47px;
+}
+
+.ticket-divider::after {
+    right: -47px;
+}
+
+.ticket-bottom {
+    padding: 24px 34px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.ticket-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 25px;
+    background: #e2f7ec;
+    color: #087443;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.ticket-number {
+    color: #68788a;
+    font-size: 12px;
+    margin-top: 9px;
+    overflow-wrap: anywhere;
+}
+
+.ticket-mark {
+    width: 75px;
+    height: 75px;
+    border: 5px solid #ff7900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #082747;
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.pass-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin: 25px auto 0;
+}
+
+.pass-actions button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.pass-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.save-button {
+    background: #082747;
+    color: #ffffff;
+}
+
+.save-button:hover {
+    background: #124a70;
+}
+
+.pass-message {
+    text-align: center;
+    margin-top: 16px;
+    color: #087443;
+    font-weight: 700;
+}
+
+@media (max-width: 520px) {
+    .pass-page {
+        padding: 35px 5% 50px;
+    }
+
+    .ticket-top,
+    .ticket-runner {
+        padding: 23px 20px;
+    }
+
+    .ticket-bottom {
+        padding: 22px 20px;
+    }
+
+    .ticket-divider {
+        margin: 0 20px;
+    }
+
+    .ticket-divider::before {
+        left: -33px;
+    }
+
+    .ticket-divider::after {
+        right: -33px;
+    }
+
+    .ticket-details {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .ticket-runner h3 {
+        font-size: 23px;
+    }
+
+    .pass-actions {
+        flex-direction: column;
+    }
+
+    .pass-actions .button {
+        width: 100%;
+    }
+}
+

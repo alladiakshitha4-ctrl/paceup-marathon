@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE marathon SYSTEM "marathon.dtd">
+<marathon>
+    <event>
+        <name>PaceUp City Marathon</name>
+        <location>Hyderabad</location>
+        <date>2026-12-20</date>
+        <race>
+            <distance>5K Fun Run</distance>
+            <fee>300</fee>
+        </race>
+        <race>
+            <distance>10K Run</distance>
+            <fee>500</fee>
+        </race>
+        <race>
+            <distance>Half Marathon</distance>
+            <fee>800</fee>
+        </race>
+        <race>
+            <distance>Full Marathon</distance>
+            <fee>1200</fee>
+        </race>
+    </event>
+</marathon>

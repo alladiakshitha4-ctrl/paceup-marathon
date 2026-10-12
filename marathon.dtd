@@ -1,0 +1,9 @@
+
+<!ELEMENT marathon (event)>
+<!ELEMENT event (name, location, date, race+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT race (distance, fee)>
+<!ELEMENT distance (#PCDATA)>
+<!ELEMENT fee (#PCDATA)>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaceUp | Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <a class="logo" href="index.html">Pace<span>Up</span></a>
+    <p class="tagline">Take the First Step</p>
+</header>
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="races.html">Races</a>
+    <a class="active" href="register.html">Register</a>
+    <a href="dashboard.html">Race Pass</a>
+</nav>
+<main class="section">
+    <p class="eyebrow">JOIN PACEUP</p>
+    <h2>Marathon Registration</h2>
+    <form id="registrationForm" class="form-card">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" required minlength="2" placeholder="Enter your name">
+
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" required placeholder="Enter your email">
+
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" min="10" max="100" required>
+
+        <label for="race">Choose Race</label>
+        <select id="race" name="race" required>
+            <option value="">Select a race</option>
+            <option value="5K Fun Run">5K Fun Run - ₹300</option>
+            <option value="10K Run">10K Run - ₹500</option>
+            <option value="Half Marathon">Half Marathon - ₹800</option>
+            <option value="Full Marathon">Full Marathon - ₹1200</option>
+        </select>
+
+        <label for="shirt">T-Shirt Size</label>
+        <select id="shirt" name="shirt" required>
+            <option value="">Select size</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+            <option value="XL">Extra Large</option>
+        </select>
+
+        <p class="fee-line">Registration Fee: <strong id="fee">₹0</strong></p>
+        <button class="button primary" type="submit">Continue to Payment</button>
+        <p id="formMessage" role="status"></p>
+    </form>
+</main>
+<footer class="footer">© 2026 PaceUp Marathon</footer>
+<script src="app.js"></script>
+</body>
+</html>

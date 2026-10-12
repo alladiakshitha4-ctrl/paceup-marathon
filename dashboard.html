@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaceUp | Digital Race Pass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="index.html">Pace<span>Up</span></a>
+    <p class="tagline">Your Race. Your Pace. Your Achievement.</p>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="races.html">Races</a>
+    <a href="register.html">Register</a>
+    <a class="active" href="dashboard.html">Race Pass</a>
+</nav>
+
+<main class="pass-page">
+    <div class="pass-heading">
+        <p class="eyebrow">YOUR MARATHON JOURNEY</p>
+        <h1>Your Digital Race Pass</h1>
+        <p>Keep your pass ready for race day.</p>
+    </div>
+
+    <div id="passContainer">
+        <div class="empty-pass">
+            <div class="empty-icon">🏃</div>
+            <h2>Your race pass is waiting!</h2>
+            <p>Register for a race and complete the demo payment to view your pass.</p>
+            <a href="register.html" class="button primary">Register Now →</a>
+        </div>
+    </div>
+
+    <div class="pass-actions" id="passActions" hidden>
+        <button class="button primary" id="downloadPass" type="button">
+            ↓ Download Race Pass
+        </button>
+        <button class="button save-button" id="savePass" type="button">
+            ♡ Save Race Pass
+        </button>
+    </div>
+
+    <p id="passMessage" class="pass-message" role="status"></p>
+</main>
+
+<footer class="footer">
+    <a class="logo" href="index.html">Pace<span>Up</span></a>
+    <p>Your Race. Your Pace. Your Achievement.</p>
+    <p class="copyright">© 2026 PaceUp Marathon</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

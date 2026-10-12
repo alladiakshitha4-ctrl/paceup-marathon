@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "5K Fun Run",
+        "distance": "5 Kilometres",
+        "fee": 300
+    },
+    {
+        "name": "10K Run",
+        "distance": "10 Kilometres",
+        "fee": 500
+    },
+    {
+        "name": "Half Marathon",
+        "distance": "21.1 Kilometres",
+        "fee": 800
+    },
+    {
+        "name": "Full Marathon",
+        "distance": "42.2 Kilometres",
+        "fee": 1200
+    }
+]
